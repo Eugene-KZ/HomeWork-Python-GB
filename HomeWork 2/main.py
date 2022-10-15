@@ -61,13 +61,13 @@
 # Найдите произведение элементов на указанных позициях. 
 # Позиции хранятся в файле file.txt в одной строке одно число.
 
-# n = [-8, 3, 7, -2, -6, 4]
-# total = 1
-# with open('file.txt', 'r', encoding='utf-8') as file:
-# 	for line in file:
-# 		i = int(line)
-# 		total *= n[i]
-# print(total)
+n = [-8, 3, 7, -2, -6, 4]
+total = 1
+with open('index.txt', 'r') as file_1:
+	for line in file_1:
+		i = int(line)
+		total *= n[i]
+print(total)
 
 
 
