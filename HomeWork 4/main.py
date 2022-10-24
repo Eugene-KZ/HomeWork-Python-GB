@@ -114,22 +114,22 @@ for i in fille_1:
 
 	for k in fille_2:
 
-		if (len(k) == 2 and len(i) == 2) and ((('x^' + k[1]) not in ignor) and (('x^' + i[1]) not in ignor)):
+		if (len(k) == 2 and len(i) == 2) and ((k[1] not in ignor) and (i[1] not in ignor)):
 
 			if int(k[1]) > int(i[1]):
 				temp = k[0] + 'x^' + k[1]
 				total.append(temp)
-				ignor.append('x^' + k[1])
+				ignor.append(k[1])
 
 			elif int(k[1]) < int(i[1]):
 				temp = i[0] + 'x^' + i[1]
 				total.append(temp)
-				ignor.append('x^' + i[1])
+				ignor.append(i[1])
 
 			elif int(k[1]) == int(i[1]):
 				temp = str(int(k[0]) + int(i[0])) + 'x^' + k[1]
 				total.append(temp)
-				ignor.append('x^' + k[1])
+				ignor.append(k[1])
 
 
 		elif len(k) == 1 and len(i) == 1:
@@ -137,18 +137,18 @@ for i in fille_1:
 			if ('x' in i[0]) and ('x' in k[0]):
 				temp = str(int(k[0].replace('x', '')) + int(i[0].replace('x', ''))) + 'x'
 				total.append(temp)
-				ignor.append('x^1')
+				ignor.append('1')
 
-			elif ((('x' in i[0]) and ('x' not in k[0])) or (('x' not in i[0]) and ('x' in k[0]))) and ('x^1' not in ignor):
+			elif ((('x' in i[0]) and ('x' not in k[0])) or (('x' not in i[0]) and ('x' in k[0]))) and ('1' not in ignor):
 
 				if ('x' in i[0]):
 					temp = i[0]
 					total.append(temp)
-					ignor.append('x^1')
+					ignor.append('1')
 				elif ('x' in k[0]):
 					temp = k[0]
 					total.append(temp)
-					ignor.append('x^1')
+					ignor.append('1')
 
 			elif ('x' not in i[0]) and ('x' not in k[0]):
 				temp = str(int(k[0]) + int(i[0]))
@@ -164,6 +164,7 @@ with open('DZ-fille_3.txt', 'w', encoding='utf-8') as fille:
 
 print(total)
 print(total_str)
+
 
 
 
