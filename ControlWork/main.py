@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import telebot
 from telebot import types
-token = ''
-appid = ''
+token = '5975972785:AAHX9Yr9amgpCq_3kKUaKUTFQU4k08rneYk'
+appid = 'bda0f28015d9c9ff32237df0cd9e4dd3'
 
 
 bot = telebot.TeleBot(token)
